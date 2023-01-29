@@ -1,8 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.tsx',
+  mode: 'development',
+  stats: 'minimal',
+  entry: './demo/src/index.tsx',
   module: {
     rules: [
       {
@@ -26,18 +29,26 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      src: path.resolve(__dirname, '../src/'),
+      demosrc: path.resolve(__dirname, './demo/src/'),
     },
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React 18 Application Template',
-      template: 'src/index.html',
-      favicon: 'src/assets/ukraine-flag.ico',
+      title: 'Style agnostic component template',
+      template: 'demo/src/index.html',
+      favicon: 'demo/src/assets/ukraine-flag.ico',
+    }),
+    new ESLintPlugin({
+      eslintPath: require.resolve('eslint'),
+      extensions: ['js', 'mjs', 'jsx', 'ts', 'tsx'],
     }),
   ],
+  devServer: {
+    static: './dist',
+    port: 8000,
+  },
 };

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./demo/dist/",
     "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
@@ -10,7 +10,7 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "paths": {
-      "src": ["src/*"]
+      "src": ["demo/src/*"]
     }
   }
 }
