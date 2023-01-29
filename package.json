@@ -4,8 +4,9 @@
   "description": "Preconfigured react template compatible with style agnostic components approach.",
   "main": "dist/index.html",
   "scripts": {
-    "demo": "webpack serve --open -c ./demo/webpack.js",
-    "lint": "eslint ./demo/src",
+    "demo": "webpack serve -c ./webpack.js",
+    "demo:build": "webpack -c ./webpack.js",
+    "lint": "eslint ./demo",
     "test": "jest",
     "jest": "jest --watch"
   },

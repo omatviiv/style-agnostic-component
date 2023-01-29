@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   stats: 'minimal',
-  entry: './demo/src/index.tsx',
+  entry: './demo/index.tsx',
   module: {
     rules: [
       {
@@ -29,7 +29,7 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      demosrc: path.resolve(__dirname, './demo/src/'),
+      demo: path.resolve(__dirname, './demo/'),
     },
   },
   output: {
@@ -39,8 +39,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Style agnostic component template',
-      template: 'demo/src/index.html',
-      favicon: 'demo/src/assets/ukraine-flag.ico',
+      template: 'demo/index.html',
+      favicon: 'demo/assets/ukraine-flag.ico',
     }),
     new ESLintPlugin({
       eslintPath: require.resolve('eslint'),
