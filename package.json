@@ -2,7 +2,7 @@
   "name": "react-template",
   "version": "1.0.0",
   "description": "Preconfigured react template compatible with style agnostic components approach.",
-  "main": "dist/index.html",
+  "main": "index.tsx",
   "scripts": {
     "demo": "webpack serve -c ./webpack.js",
     "demo:build": "webpack -c ./webpack.js",
