@@ -1,4 +1,9 @@
 React template compatible with style agnostic components approach.
+**Replace with component description and how to use info when template used**
+
+# why this component exists
+**Provide explanation what kind of valuable logic or JSX structure this
+component provides so that it can't be just part of the theme**
 
 # style agnostic component approach
 Component is implemented in a way that in its JSX structure all tags and styles
