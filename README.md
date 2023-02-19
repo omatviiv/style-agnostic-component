@@ -8,7 +8,11 @@ create a map (`theme` property object) of styled components where each will
 represent a specific node in the JSX structure of the component.
 
 Thus when following the rule above we are achieving complete style separation
-from the component structure and logic.
+from the component structure and logic. And taking this into account there is
+one more important rule for styleagnostic components:
+- if component doesn't have any logic to be separated from the styling then
+such component doesn't deserve a separate repo and can be simply part of the
+theme.
 
 # Build setup notes
 The component is provided as is without any bundling or transformation.
