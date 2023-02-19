@@ -1,6 +1,13 @@
 React template compatible with style agnostic components approach.
 **Replace with component description and how to use info when template used**
 
+**Dont forget to update in package.json:**
+- name
+- description
+- repository url
+- bugs url
+- homepage
+
 # why this component exists
 **Provide explanation what kind of valuable logic or JSX structure this
 component provides so that it can't be just part of the theme**
