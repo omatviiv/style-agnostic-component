@@ -39,4 +39,4 @@ Except that its buildable src/ is demo/ and stores not the component itself
 but demo pages for the component.
 
 # node & npm versions
-Project created with node 18 and npm 8.
+Project created with node 20 and npm 10.
