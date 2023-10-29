@@ -15,6 +15,9 @@ So simply grep project for this phrase and go through the search results.
 - bugs url
 - homepage
 
+Preferrably for the public demo page styleagnostic-theme-service should be
+used which has ready simple components useful in the demo.
+
 # why this component exists
 **Provide explanation what kind of valuable logic or JSX structure this
 component provides so that it can't be just part of the theme**
