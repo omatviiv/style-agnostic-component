@@ -78,6 +78,17 @@ testing purposes: some specific test cases for cypress tests to make
 testing more convenient isolated and focused on specific aspect of
 the component.
 
+## Webpack bundle analyzer
+There is no need for bundle analyzer because there is no bundle.
+Webpack is present here only for demo application which is only intended
+for local development and its newer deployed anywhere. It is just demo/index.tsx
+which is included into demo tagged npm version but it is provided as is
+without any additional processing.
+
+And same thing with ensuring that test files don't go into bundle - nothing
+to ensure because there is no deployable bundle.
+
+
 # Demo application webpack setup notes
 As `demo/index.tsx` is reserved for the isolated default demo component for
 ability to share default demo into some consolidated components demo web app
