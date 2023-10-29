@@ -1,16 +1,15 @@
 import React from 'react';
 
+// THIS IS PUBLICK DEMO
+// DON'T IMPORT ANYTHING from demo except demo/style.ts or component from ../
+// DON'T USE IMPORT ALIASES
 import Component from '../';
-import {
-  Header, ComponentContainer,
-} from './style';
+import { ComponentContainer } from './style';
 
-// move all of the components used here into theme-service
-// which in turn will be moved to theme-service repository
-const DefaultInputDemo: React.FC = () => <>
-  <Header>Your component name here</Header>
+const PublicDemo: React.FC = () => <>
+  <h1>Your component name here</h1>
   Demonstrate the component here:
   <ComponentContainer><Component/></ComponentContainer>
 </>;
 
-export default DefaultInputDemo;
+export default PublicDemo;

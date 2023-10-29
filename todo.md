@@ -11,7 +11,7 @@ __feat__ - change that introduces new functionality but doesn't break
 __break__ - change that breaks backward compatibility
 
 # setup project tasks (for the initial release)
-Tasks in this section are all __fix__ project is in setup process.
+Tasks in this section are all __fix__ because project is before initial release.
 - replace-oncreate: add first tasks starting from this one
 
 # fixes and improvements (post initial release)
