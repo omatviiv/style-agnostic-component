@@ -1,20 +1,16 @@
 import React from 'react';
-import trident from 'demo/assets/trident.svg?url';
-import Trident from 'demo/assets/trident.svg';
-import {Container, Header, Image} from './style';
-import Input from '../../';
+import DefaultDemo from '../';
+import {
+  GlobalStyle, Container,
+} from './style';
 
 const Application: React.FC = () => <Container>
-  <Header>This is simple react app</Header>
-  <br/>
-  Svgr: svg as react component:
-  <Trident height='1.5rem'/>
-  <br/>
-  Svgr: svg as url:
-  <Image src={trident}/>
-
-  Input component:
-  <Input label='Name'/>
+  {/* TODO: include nav menu here so that DefaultDemo can be reused from
+            demo/index.tsx which is also a default public demo page
+            imported in the styleagnostic consolidated demo project
+  */}
+  <GlobalStyle/>
+  <DefaultDemo/>
 </Container>;
 
 export default Application;

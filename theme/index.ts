@@ -1,12 +1,12 @@
-import styled, { StyledComponent } from 'styled-components';
+import styled, {StyledComponent} from 'styled-components';
 
-export type InputThemeType = {
+export type ComponentThemeType = {
   Container: StyledComponent<'div', object, object>,
   Label: StyledComponent<'div', object, object>,
   Input: StyledComponent<'input', object, object>,
 };
 
-const InputTheme: InputThemeType = {
+const ComponentTheme: ComponentThemeType = {
   Container: styled.div``,
   Label: styled.div`
     color: lightgrey;
@@ -16,4 +16,4 @@ const InputTheme: InputThemeType = {
   `,
 };
 
-export default InputTheme;
+export default ComponentTheme;

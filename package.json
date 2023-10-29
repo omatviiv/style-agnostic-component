@@ -1,25 +1,26 @@
 {
-  "name": "styleagnostic-component",
-  "version": "1.0.0",
-  "description": "component short description",
+  "name": "replace-oncreate: styleagnostic-component",
+  "version": "0.0.1",
+  "description": "replace-oncreate: component short description",
   "main": "index.tsx",
   "scripts": {
     "demo": "webpack serve -c ./webpack.js",
     "demo:build": "webpack -c ./webpack.js",
     "lint": "eslint ./demo",
     "test": "jest",
-    "jest": "jest --watch"
+    "jest": "jest --watch",
+    "publish-all": ". ./scripts/publish.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omatviiv/styleagnostic-component.git"
+    "url": "replace-oncreate:git+https://github.com/omatviiv/styleagnostic-component.git"
   },
   "author": "Oleh Matviiv",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/omatviiv/styleagnostic-component/issues"
+    "url": "replace-oncreate:https://github.com/omatviiv/styleagnostic-component/issues"
   },
-  "homepage": "https://github.com/omatviiv/styleagnostic-component#readme",
+  "homepage": "replace-oncreate:https://github.com/omatviiv/styleagnostic-component#readme",
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
     "@types/jest": "^29.2.6",
@@ -40,7 +41,7 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6"

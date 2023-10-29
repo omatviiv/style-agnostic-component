@@ -1,7 +1,14 @@
 React template compatible with style agnostic components approach.
 **Replace with component description and how to use info when template used**
 
-**Dont forget to update in package.json:**
+**Dont forget to update new project with component specific basic data**
+For simplicity all places that need attention are marked with:
+```
+ replace-oncreate:
+```
+So simply grep project for this phrase and go through the search results.
+
+**For example in package.json pay attention to:**
 - name
 - description
 - repository url
@@ -12,7 +19,7 @@ React template compatible with style agnostic components approach.
 **Provide explanation what kind of valuable logic or JSX structure this
 component provides so that it can't be just part of the theme**
 
-# style agnostic component approach
+# Style agnostic component approach
 Component is implemented in a way that in its JSX structure all tags and styles
 are coming from one single conponent property `theme`.
 Thanks to [styled-components](https://styled-components.com/) we can
@@ -30,7 +37,7 @@ theme.
 The component is provided as is without any bundling or transformation.
 It is responsibility of the destination project to build it and bundle.
 Which means that this approach will only work in the infrastructure where
-all projects share same eslint rules and build configuration.
+all projects share same eslint rules and similar build configuration.
 
 This particular project also contains a component demo for convenience of
 development and testing. And the demo project is very similar to 
@@ -38,5 +45,47 @@ development and testing. And the demo project is very similar to
 Except that its buildable src/ is demo/ and stores not the component itself
 but demo pages for the component.
 
-# node & npm versions
+## Build setup notes for component demo
+`demo/` contains component demo application for developer convenience
+of component development and testing.
+
+This demo application is not hosted anywhere directly because its intented
+for local development use but it is very useful to have a separate
+components demo public web application that would have all the components
+demonstrated in one web site where component user can see how to use
+components with code examples.
+
+**Demo requirements to satisfy manually:**
+- Create `demo/index.tsx` public demo which should be independent from anything
+inside `demo/` and can only import the component or optionally some external
+libraries
+- no import aliases are allowed in the `demo/index.tsx`
+- demo/index.tsx may be reused in local demo but only as independent demo page
+(i.e. without demo controls like menu etc.)
+**Demo requirements to satisfy by using `npm run publish-all`:**
+- This @demo tagged version should include the demo commponent which should be
+located in the `demo/index.tsx` file.
+- to reuse code from local demo app in the public consolidated components
+demo there should be @demo tag npm published version which will contain one
+demo component for the component which then could be imported in the
+consolidated components demo app.
+
+`demo/pages` can contain any number of demo pages to be used for specific
+testing purposes: some specific test cases for cypress tests to make
+testing more convenient isolated and focused on specific aspect of
+the component.
+
+# Demo application webpack setup notes
+As `demo/index.tsx` is reserved for the isolated default demo component for
+ability to share default demo into some consolidated components demo web app
+the demo application itself originates from `demo/main.tsx`.
+
+# Component release notes
+todo.md - is a file where some fixes or improvements are planned and documented
+specifically for the component itself independently from the whole
+styleagnostic project backlog.
+Project backlog is for organising work between all of the components and themes
+but todo.md is completely dedicated to the component related changes.
+
+# Node & npm versions
 Project created with node 20 and npm 10.

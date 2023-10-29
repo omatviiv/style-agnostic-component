@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   stats: 'minimal',
-  entry: './demo/index.tsx',
+  entry: './demo/main.tsx',
   module: {
     rules: [
       {

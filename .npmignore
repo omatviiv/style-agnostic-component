@@ -1,6 +1,10 @@
-demo
-dist
-.eslintrf.js
+node_modules
+scripts
+.eslintrc.js
 jest.config.js
+webpack.js
 tsconfig.json
+todo.md
+dist
 package-lock.json
+demo/*

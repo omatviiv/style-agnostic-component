@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
-import InputTheme, {InputThemeType} from './theme';
+import ComponentTheme, {ComponentThemeType} from './theme';
 
-const Input: React.FC<{
-  label: string,
+// replace-oncreate: the whole componenent ofcourse :)
+const Component: React.FC<{
+  label?: string,
   value?: string,
-  theme?: InputThemeType,
+  theme?: ComponentThemeType,
 }> = ({
-  label,
+  label = '',
   value = '',
-  theme = InputTheme,
+  theme = ComponentTheme,
 }) => {
   const [val, setVal] = useState(value);
 
@@ -22,4 +23,4 @@ const Input: React.FC<{
   </theme.Container>;
 };
 
-export default Input;
+export default Component;
