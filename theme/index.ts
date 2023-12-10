@@ -1,9 +1,9 @@
-import styled, {StyledComponent} from 'styled-components';
+import styled from 'styled-components';
 
 export type ComponentThemeType = {
-  Container: StyledComponent<'div', object, object>,
-  Label: StyledComponent<'div', object, object>,
-  Input: StyledComponent<'input', object, object>,
+  Container: React.ElementType,
+  Label: React.ElementType,
+  Input: React.ElementType,
 };
 
 const ComponentTheme: ComponentThemeType = {
