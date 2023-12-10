@@ -4,7 +4,7 @@ React template compatible with style agnostic components approach.
 **Dont forget to update new project with component specific basic data**
 For simplicity all places that need attention are marked with:
 ```
- replace-oncreate:
+  replace-oncreate:
 ```
 So simply grep project for this phrase and go through the search results.
 
