@@ -18,6 +18,13 @@ So simply grep project for this phrase and go through the search results.
 Preferrably for the public demo page styleagnostic-theme-service should be
 used which has ready simple components useful in the demo.
 
+Provide the generic component description here. Briefly describe what tasks
+this component aim to solve.
+
+# Use
+Provide exact steps to install, import and use in the project.
+Give code example of basic usage first and then provide more complex examples.
+
 # why this component exists
 **Provide explanation what kind of valuable logic or JSX structure this
 component provides so that it can't be just part of the theme**
