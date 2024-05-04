@@ -1,6 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const path = require('path');
+const createStyledComponentsTransformer = require(
+  'typescript-plugin-styled-components',
+).default;
+
+const styledComponentsTransformer = createStyledComponentsTransformer();
 
 module.exports = {
   mode: 'development',
@@ -10,8 +15,13 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        loader: 'ts-loader',
         exclude: /node_modules/,
+        options: {
+          getCustomTransformers: () => ({
+            before: [styledComponentsTransformer],
+          })
+        },
       },
       {
         test: /\.svg$/i,
