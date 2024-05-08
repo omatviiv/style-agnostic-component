@@ -21,13 +21,16 @@ used which has ready simple components useful in the demo.
 Provide the generic component description here. Briefly describe what tasks
 this component aim to solve.
 
+
 # Use
 Provide exact steps to install, import and use in the project.
 Give code example of basic usage first and then provide more complex examples.
 
+
 # why this component exists
 **Provide explanation what kind of valuable logic or JSX structure this
 component provides so that it can't be just part of the theme**
+
 
 # Style agnostic component approach
 Component is implemented in a way that in its JSX structure all tags and styles
@@ -43,6 +46,7 @@ one more important rule for styleagnostic components:
 such component doesn't deserve a separate repo and can be simply part of the
 theme.
 
+
 # Build setup notes
 The component is provided as is without any bundling or transformation.
 It is responsibility of the destination project to build it and bundle.
@@ -54,6 +58,29 @@ development and testing. And the demo project is very similar to
 [react-template](https://github.com/omatviiv/react-template#setup-notes).
 Except that its buildable src/ is demo/ and stores not the component itself
 but demo pages for the component.
+
+
+## SVGs
+SVGR is configured for demo project only.
+Very useful library that allows to automatically transform svg into react component.
+Just followed instructions on svgr
+[documentation](https://react-svgr.com/docs/webpack/) to install it.
+
+To fix typescript error after svgr is added there has to be svg global
+declaration available to typescript. Check `src/type/svg.d.ts`.
+
+When using suggested resourseQuery method to be able to use svg as url there was
+typescript related issue which was fixed with the help of this
+[question](https://stackoverflow.com/questions/60816666/how-to-use-query-param-import-in-webpack-with-typescript-without-getting-cannot).
+
+But when component or theme publishes svg files then all such svg files
+have to be placed in `svg/` folder and can be grouped in folders as desired.
+
+Often svgs are not optimised when exported from verctor graphics editors so
+there automatic optimisation configured with gulp. Just run `npm run gulp` in
+separate terminal and it will watch for svg files in `svg/` and optimise
+automatically.
+
 
 ## Build setup notes for component demo
 `demo/` contains component demo application for developer convenience
@@ -85,6 +112,7 @@ testing purposes: some specific test cases for cypress tests to make
 testing more convenient isolated and focused on specific aspect of
 the component.
 
+
 ## Webpack bundle analyzer
 There is no need for bundle analyzer because there is no bundle.
 Webpack is present here only for demo application which is only intended
@@ -101,6 +129,7 @@ As `demo/index.tsx` is reserved for the isolated default demo component for
 ability to share default demo into some consolidated components demo web app
 the demo application itself originates from `demo/main.tsx`.
 
+
 # Component release notes
 todo.md - is a file where some fixes or improvements are planned and documented
 specifically for the component itself independently from the whole
@@ -108,12 +137,14 @@ styleagnostic project backlog.
 Project backlog is for organising work between all of the components and themes
 but todo.md is completely dedicated to the component related changes.
 
+
 # Take part in component development
 1. clone the repo
 2. run `npm install`
 3. run `npm run demo` to start the demo application˙
 4. run `npm run jest` to run tests watch
 5. run `npm run gulp` to run svg images automatic optimisation
+
 
 # Node & npm versions
 Project created with node 20 and npm 10.
