@@ -9,6 +9,7 @@
     "lint": "eslint ./demo",
     "test": "jest",
     "jest": "jest --watch",
+    "gulp": "gulp",
     "publish-all": ". ./scripts/publish.sh"
   },
   "repository": {
@@ -26,24 +27,28 @@
     "@types/jest": "^29.2.6",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "@typescript-eslint/eslint-plugin": "^6.13.2",
-    "@typescript-eslint/parser": "^6.13.2",
-    "eslint": "^8.32.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.32.1",
     "eslint-webpack-plugin": "^4.0.1",
-    "html-webpack-plugin": "^5.5.0",
+    "gulp": "^5.0.0",
+    "gulp-svgo": "^1.2.5",
+    "gulp-watch": "^5.0.1",
+    "html-webpack-plugin": "^5.6.0",
     "jest": "^29.3.1",
-    "ts-jest": "^29.0.5",
+    "react-router-dom": "^6.23.0",
+    "ts-jest": "^29.1.2",
     "ts-loader": "^9.4.2",
     "typescript": "^5.3.3",
     "typescript-plugin-styled-components": "^3.0.0",
-    "webpack": "^5.75.0",
+    "webpack": "^5.90.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.11.1"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^6.1.1"
+    "react": "^18.2.48",
+    "react-dom": "^18.2.18",
+    "styled-components": "^6.1.8"
   }
 }

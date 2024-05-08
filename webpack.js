@@ -15,6 +15,9 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
+        // react-template uses babel-loader because more advances config
+        // is needed, here this is only demo app which is only for local
+        // development so ts-loader should be fine
         loader: 'ts-loader',
         exclude: /node_modules/,
         options: {
@@ -40,6 +43,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
       demo: path.resolve(__dirname, './demo/'),
+      svg: path.resolve(__dirname, './svg/'),
     },
   },
   output: {
