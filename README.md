@@ -141,9 +141,11 @@ but todo.md is completely dedicated to the component related changes.
 # Take part in component development
 1. clone the repo
 2. run `npm install`
-3. run `npm run demo` to start the demo application˙
-4. run `npm run jest` to run tests watch
-5. run `npm run gulp` to run svg images automatic optimisation
+3. run `npm run demo` to start the demo application
+4. run `npm run test:watch` to run tests watch
+5. run `npm run typecheck:watch` to run typescript typecheck watch
+6. (optional) `npm run svgo:watch` to watch and optimise svg files
+   npm run demo:build command will anyway run svgo recursively on src folder
 
 
 # Node & npm versions
