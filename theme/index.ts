@@ -7,7 +7,7 @@ export type ComponentThemeType = {
 };
 
 const ComponentTheme: ComponentThemeType = {
-    Container: styled.div``,
+  Container: styled.div``,
   Label: styled.div`
     color: lightgrey;
   `,
