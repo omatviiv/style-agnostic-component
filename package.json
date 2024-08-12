@@ -7,7 +7,7 @@
     "svgo": "svgo -rf svg",
     "svgo:watch": "gulp",
     "demo": "webpack serve -c ./webpack.js",
-    "demo:build": "npm run svgo; webpack -c ./webpack.js, npm run typecheck",
+    "demo:build": "npm run svgo && webpack -c ./webpack.js && npm run typecheck",
     "typecheck": "tsc --noEmit",
     "typecheck:watch": "tsc --watch --noEmit",
     "lint": "eslint ./demo",
@@ -15,7 +15,8 @@
     "test:watch": "jest --watch",
     "publish-all": ". ./scripts/publish.sh",
     "audit": "npm audit --omit dev",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prepush": "npm run demo:build && npm run test"
   },
   "repository": {
     "type": "git",
