@@ -1,4 +1,7 @@
 node_modules
+cypress
+cypress.config.ts
+gulpfile.mjs
 scripts
 .eslintrc.js
 jest.config.js
@@ -8,6 +11,3 @@ todo.md
 dist
 package-lock.json
 demo/*
-cypress
-cypress.config.ts
-gulpfile.mjs
