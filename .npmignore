@@ -2,9 +2,12 @@ node_modules
 scripts
 .eslintrc.js
 jest.config.js
-webpack.js
+webpack
 tsconfig.json
 todo.md
 dist
 package-lock.json
 demo/*
+cypress
+cypress.config.ts
+gulpfile.mjs

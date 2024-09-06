@@ -6,8 +6,8 @@
   "scripts": {
     "svgo": "svgo -rf svg",
     "svgo:watch": "gulp",
-    "demo": "webpack serve -c ./webpack.js",
-    "demo:build": "npm run svgo && webpack -c ./webpack.js && npm run typecheck",
+    "demo": "webpack serve -c ./webpack/base.config.js",
+    "demo:build": "npm run svgo && webpack -c ./webpack/base.config.js && npm run typecheck",
     "typecheck": "tsc --noEmit",
     "typecheck:watch": "tsc --watch --noEmit",
     "lint": "eslint ./demo",
@@ -16,7 +16,9 @@
     "publish-all": ". ./scripts/publish.sh",
     "audit": "npm audit --omit dev",
     "prepare": "husky",
-    "prepush": "npm run demo:build && npm run test"
+    "prepush": "npm run demo:build && npm run test",
+    "cypress": "cypress open"
+
   },
   "repository": {
     "type": "git",
