@@ -1,8 +1,11 @@
 node_modules
+cypress
+cypress.config.ts
+gulpfile.mjs
 scripts
 .eslintrc.js
 jest.config.js
-webpack.js
+webpack
 tsconfig.json
 todo.md
 dist

@@ -42,12 +42,12 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
-      demo: path.resolve(__dirname, './demo/'),
-      svg: path.resolve(__dirname, './svg/'),
+      demo: path.resolve(__dirname, '../demo/'),
+      svg: path.resolve(__dirname, '../svg/'),
     },
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.js',
   },
   plugins: [
