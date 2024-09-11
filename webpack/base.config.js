@@ -42,6 +42,7 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     alias: {
+      projectRoot: path.resolve(__dirname, '../'),
       demo: path.resolve(__dirname, '../demo/'),
       svg: path.resolve(__dirname, '../svg/'),
     },

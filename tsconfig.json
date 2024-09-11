@@ -12,6 +12,8 @@
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
+      "projectRoot": ["projectRoot/*"],
+      "svg": ["svg/*"],
       "demo": ["demo/*"]
     }
   },
