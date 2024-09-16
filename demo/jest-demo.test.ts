@@ -1,4 +1,4 @@
-import {sum} from './jest-demo';
+import {sum} from 'demo/jest-demo';
 
 describe('sum() returns', () => {
   it('sum of two numbers', () => {
